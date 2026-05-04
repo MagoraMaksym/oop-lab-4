@@ -4,7 +4,6 @@
 #include <iostream>
 #include <string>
 
-
 class Vehicle {
 private:
     int m_count_of_passenger_seats, m_max_speed, m_fuel_consumption, m_cost_of_vehicle;
@@ -17,15 +16,15 @@ public:
     bool setCostVehicle(int cost);
     bool setName(std::string name_of_vehicle);
 
+    virtual ~Vehicle();
     virtual void StartEngine();
-
-public:
     void CreateVehicle();
 };
 
 class Car : public Vehicle {
 public:
     Car();
+    virtual ~Car() override; 
     void StartEngine() override;
 };
 
@@ -34,12 +33,14 @@ private:
     int m_battery_capacity;
 public:
     ElectricCar();
+    virtual ~ElectricCar() override; 
     void StartEngine() override;
 };
 
 class Plane : public Vehicle {
 public:
     Plane();
+    virtual ~Plane() override; 
     void StartEngine() override;
 };
 
@@ -48,7 +49,8 @@ private:
     int m_load_capacity;
 public:
     Truck();
+    virtual ~Truck() override; 
     void StartEngine() override;
 };
 
-#endif //_4_VEHICLE_H
+#endif //_4_VEHICLE_Hі
