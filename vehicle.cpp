@@ -80,7 +80,7 @@ Car::Car()
 
 void Car::StartEngine()
 {
-    std::cout << " Двигун машини заведено!";
+    std::cout << " Двигун машини заведено";
 }
 
 ElectricCar::ElectricCar()
@@ -125,5 +125,31 @@ Truck::Truck()
 
 void Truck::StartEngine()
 {
-    std::cout << "\nДизельний двигун вантажівки запрацював.";
+    std::cout << "\nДизельний двигун вантажівки запрацював";
+}
+
+
+Vehicle::~Vehicle()
+{
+    std::cout << "\nVehicle Об'єкт базового класу знищено";
+}
+
+Car::~Car()
+{
+    std::cout << "\nCar Машину видалено";
+}
+
+ElectricCar::~ElectricCar()
+{
+    std::cout << "\nElectricCar Електромобіль та акумулятори видалено";
+}
+
+Plane::~Plane()
+{
+    std::cout << "\nPlane Літак видалено";
+}
+
+Truck::~Truck()
+{
+    std::cout << "\nTruck Вантажівку видалено";
 }
